@@ -1,0 +1,15 @@
+theme = "onedark"
+
+[editor]
+line-number = "relative"
+auto-completion = true
+auto-info = true
+
+[editor.statusline]
+left = ["mode"]
+center=["file-name"]
+right = ["diagnostics", "position-percentage"]
+separator = "|"
+
+[editor.lsp]
+display-inlay-hints = true
