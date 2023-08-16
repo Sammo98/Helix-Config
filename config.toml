@@ -13,3 +13,8 @@ separator = "|"
 
 [editor.lsp]
 display-inlay-hints = true
+
+[keys.normal]
+L = "goto_line_end"
+H = "goto_line_start"
+G = "goto_last_line"
