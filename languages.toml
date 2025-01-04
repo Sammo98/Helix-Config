@@ -3,7 +3,24 @@
 
 [[language]]
 name = "python"
-language-server = { command = "pylsp"}
+formatter = { command = "black", args = ["--quiet", "-"] }
+auto-format = true
+# language-server = { command = "pylsp"}
 
-[language.config.pylsp.plugins]
-ruff = {enabled = true, extendSelect = ["I"]}
+
+[[language]]
+name = "rust"
+# formatter = { command = "cargo", args = ["fmt"]}
+language-servers = ["rust-analyzer"]
+
+[language-server.rust-analyzer.config]
+check.command = "clippy"
+
+
+[[language]]
+name = "svelte"
+auto-format = true
+formatter = { command = 'prettier', args = ["--plugin", "prettier-plugin-svelte", "--write"] }
+
+# [language.config.pylsp.plugins]
+# ruff = {enabled = true, extendSelect = ["I"]}
